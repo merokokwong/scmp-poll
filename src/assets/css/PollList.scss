@@ -1,0 +1,67 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+
+.poll-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.poll {
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding: 20px;
+  margin: 5px;
+  text-align: left;
+  width: 41%;
+  display: inline;
+
+  @include for-phone-only {
+    width: 100%;
+  }
+
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .poll-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-phone-only {
+      flex-direction: column;
+    }
+
+    .no-vote {
+      background-color: #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+
+  .total-vote {
+    font-size: 14px;
+  }
+
+  .poll-answer {
+    > button {
+      margin: 10px 10px 10px 0;
+    }
+  }
+  .answer-option {
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 100;
+    cursor: pointer;
+  }
+}
+
+.poll:first-child {
+  width: 90%;
+}
