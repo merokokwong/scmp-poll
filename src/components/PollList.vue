@@ -30,7 +30,7 @@
           :options="chartOptions(poll.answer.options)"
           :series="getSeries(poll.answer.options)"
         ></apexchart>
-        <div v-if="totalVote(poll.answer.options) === 0" class="no-vote">
+        <div v-else class="no-vote">
           There's no one vote for this poll yet. <br />
           Be the first to vote!
         </div>
