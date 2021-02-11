@@ -9,7 +9,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "apexcharts": "^3.8.6",
+    "apexcharts": "^3.24.0",
     "core-js": "^2.6.5",
     "moment": "^2.24.0",
     "vue": "^2.6.10",
